@@ -17,9 +17,9 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="4" CornerRadius="8" HasShadow="False" BorderColor="#ddd" Margin="4">
-                        <GestureRecognizerCollection>
+                        <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnImageTapped" NumberOfTapsRequired="1" />
-                        </GestureRecognizerCollection>
+                        </Frame.GestureRecognizers>
 
                         <Image Source="{Binding FilePath}" Aspect="AspectFill" HeightRequest="120" WidthRequest="120" />
                     </Frame>

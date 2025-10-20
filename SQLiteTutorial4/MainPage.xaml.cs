@@ -116,7 +116,7 @@ namespace SQLiteTutorial4
             }
 
             // Navigate to detail page by passing ID
-            await Shell.Current.GoToAsync($"{nameof(ImageDetailPage)}?Id={imageItem.ID}");
+            await Shell.Current.GoToAsync($"{nameof(ImageDetailPage)}?Id={imageItem.Id}");
         }
     }
 }
