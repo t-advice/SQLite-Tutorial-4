@@ -1,0 +1,83 @@
+# .NET MAUI (.NET 9) - Visual Studio 2022
+
+# Build results
+[Bb]in/
+[Oo]bj/
+artifacts/
+[TestR]esults/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# IDEs
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# NuGet
+packages/
+*.nupkg
+# NuGet restore creates these
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# MAUI/Platform packaging outputs
+# Windows
+AppPackages/
+BundleArtifacts/
+**/Package.StoreAssociation.xml
+**/*.appx
+**/*.appxbundle
+**/*.msix
+**/*.msixbundle
+
+# Android
+**/*.apk
+**/*.aab
+**/debug.keystore
+**/*.keystore
+**/*.jks
+
+# iOS/macOS
+**/*.ipa
+**/*.xcarchive
+**/*.dSYM
+**/*.app
+**/*.mobileprovision
+**/*.p12
+**/*.cer
+
+# Temporary files
+[Tt]humbs.db
+[Dd]esktop.ini
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+
+# Rider/Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Publish profiles (user-specific)
+**/*.pubxml.user
+
+# SQLite WAL/journal files created at runtime (keep schema/db files you add intentionally)
+*.db-shm
+*.db-wal
