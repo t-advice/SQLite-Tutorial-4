@@ -1,4 +1,4 @@
-# .NET MAUI + SQLite Tutorial: MediaPicker, Camera, Save & Delete Images
+# .NET MAUI + SQLite Tutorials: MediaPicker, Camera, Save & Delete Images
 
 This tutorial shows how to:
 - pick images with MediaPicker
