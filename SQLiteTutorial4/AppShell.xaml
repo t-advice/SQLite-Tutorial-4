@@ -6,9 +6,8 @@
     xmlns:local="clr-namespace:SQLiteTutorial4"
     Title="SQLiteTutorial4">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <Shell.Items>
+        <ShellContent Title="Images" ContentTemplate="{DataTemplate local:MainPage}"/>
+    </Shell.Items>
 
 </Shell>
