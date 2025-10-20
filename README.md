@@ -7,13 +7,21 @@ This tutorial shows how to:
 - delete images from both storage and the database
 
 Targets .NET 9 and .NET MAUI in Visual Studio 2022.
+# SQLiteTutorial4
 
-## Features
-- Local SQLite database (`sqlite-net-pcl`)
-- Image metadata persisted (file name, path, timestamp)
-- Files stored under `FileSystem.AppDataDirectory/photos`
-- Cross-platform MediaPicker for pick/capture
-- Simple gallery UI to view and delete images
+Simple .NET MAUI image gallery that uses SQLite to store file paths for images picked or captured using MediaPicker.
+
+Features:
+- Pick photo from library
+- Capture photo with camera
+- Save file locally and record in SQLite
+- Grid view of thumbnails
+- View full image and delete (removes file + DB record)
+
+Platform notes:
+- Add camera/photo usage descriptions in iOS Info.plist.
+- Add camera/storage permissions in AndroidManifest and handle runtime permissions when needed.
+
 
 ## Prerequisites
 - Visual Studio 2022 with .NET Multi-platform App UI development workload
