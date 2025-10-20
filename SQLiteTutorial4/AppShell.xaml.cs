@@ -1,4 +1,6 @@
-﻿namespace SQLiteTutorial4
+﻿using SQLiteTutorial4.Views;    
+
+namespace SQLiteTutorial4
 {
     public partial class AppShell : Shell
     {

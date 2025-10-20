@@ -1,6 +1,7 @@
 ﻿using SQLiteTutorial4.Models;
 using Microsoft.Maui.Storage; // for MediaPicker
 using System.IO;
+using SQLiteTutorial4.Views;
 
 namespace SQLiteTutorial4
 {
