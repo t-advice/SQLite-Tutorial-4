@@ -23,6 +23,7 @@ namespace SQLiteTutorial4
         public App()
         {
             InitializeComponent();
+            MainPage = new AppShell();
         }
 
         
