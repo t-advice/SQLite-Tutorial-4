@@ -32,8 +32,10 @@ namespace SQLiteTutorial4.Services
         }
         public Task<int> SaveImageAsync(ImageItem item)
         {
-            return _database.InsertOrReplaceAsync(item);
+            return _database.InsertAsync(item); // only insert an new image 
         }
+        // this is an interesting method . Replace beign deleted means sqlite wil not keep replacing the item
+        // and will just insert a new one.
 
         public Task<int> DeleteImageAsync(ImageItem item)
         {
