@@ -4,10 +4,10 @@ using Microsoft.Maui.Controls;
 
 namespace SQLiteTutorial4.Views
 {
-    [QueryProperty(nameof(Id), "Id")]
+    [QueryProperty(nameof(ImageId), "Id")]
     public partial class ImageDetailPage : ContentPage
     {
-        public int Id { get; set; }
+        public int ImageId { get; set; }
         ImageItem imageItem;
 
         // Add a field for FullImage and initialize it in the constructor if not already defined in XAML
@@ -20,11 +20,11 @@ namespace SQLiteTutorial4.Views
             // If FullImage is not defined in XAML, create and add it to the page
             if (FindByName("FullImage") is Image image)
             {
-                _fullImage = image;
+                _fullImage = image; // Reference the existing Image defined in XAML
             }
             else
             {
-                _fullImage = new Image { AutomationId = "FullImage" };
+                _fullImage = new Image { AutomationId = "FullImage" }; // Set properties as needed 
                 Content = _fullImage; // Or add to a layout if needed
             }
         }
@@ -33,9 +33,9 @@ namespace SQLiteTutorial4.Views
         {
             base.OnAppearing();
 
-            if (Id != 0)
+            if (ImageId != 0)
             {
-                imageItem = await App.Database.GetImageByIdAsync(Id);
+                imageItem = await App.Database.GetImageByIdAsync(ImageId);
                 if (imageItem != null && File.Exists(imageItem.FilePath) && _fullImage != null)
                 {
                     _fullImage.Source = ImageSource.FromFile(imageItem.FilePath);
