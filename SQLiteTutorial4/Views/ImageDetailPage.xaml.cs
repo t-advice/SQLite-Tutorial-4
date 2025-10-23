@@ -42,6 +42,16 @@ namespace SQLiteTutorial4.Views
                 }
             }
         }
+        private async void OnCaptionedChanged(object sender, TextChangedEventArgs e)
+        {
+            if (imageItem != null)
+            {
+                imageItem.Caption = e.NewTextValue;
+                await App.Database.UpdateImageAsync(imageItem);
+            }
+        }
+
+
 
         private async void OnDeleteClicked(object sender, EventArgs e)
         {
