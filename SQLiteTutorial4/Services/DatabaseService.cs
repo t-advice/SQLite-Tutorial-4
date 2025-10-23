@@ -41,6 +41,10 @@ namespace SQLiteTutorial4.Services
         {
             return _database.DeleteAsync(item);
         }
+        public Task<int> UpdateImageAsync(ImageItem item)
+        {
+            return _database.UpdateAsync(item);
+        }
 
     }
 }
