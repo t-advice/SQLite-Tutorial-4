@@ -16,13 +16,25 @@
                         HeightRequest="700">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="4" CornerRadius="60" HasShadow="False" BorderColor="#ddd" Margin="4">
-                        <Image Source="{Binding FilePath}" Aspect="AspectFill" HeightRequest="120" WidthRequest="120">
+                    <Border StrokeThickness="2" 
+                            Stroke="#ddd" 
+                            Margin="8"
+                            HeightRequest="128"
+                            WidthRequest="128"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                        <Border.StrokeShape>
+                            <Ellipse />
+                        </Border.StrokeShape>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnImageTapped" NumberOfTapsRequired="1" />
+                        </Border.GestureRecognizers>
+                        <Image Source="{Binding FilePath}" Aspect="Fill">
                             <Image.Clip>
-                                <EllipseGeometry Center="60,60" RadiusX="60" RadiusY="60" />
+                                <EllipseGeometry Center="64,64" RadiusX="64" RadiusY="64" />
                             </Image.Clip>
                         </Image>
-                    </Frame>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
