@@ -10,7 +10,10 @@
             <Button Text="Pick Photo" Clicked="OnPickPhotoClicked" CornerRadius="20" />
         </HorizontalStackLayout>
         <VerticalStackLayout>
-            <Label></Label>
+            <Label Text="My Images" 
+                   Padding="10"
+                   FontSize="25"
+                   FontAttributes="Bold"></Label>
         </VerticalStackLayout>
 
         <CollectionView x:Name="ImagesCollection"
