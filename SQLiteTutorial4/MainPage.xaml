@@ -6,8 +6,8 @@
     <VerticalStackLayout Padding="12" Spacing="10">
 
         <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-            <Button Text="Capture Photo" Clicked="OnCapturePhotoClicked" />
-            <Button Text="Pick Photo" Clicked="OnPickPhotoClicked" />
+            <Button Text="Capture Photo" Clicked="OnCapturePhotoClicked" CornerRadius="20" />
+            <Button Text="Pick Photo" Clicked="OnPickPhotoClicked" CornerRadius="20" />
         </HorizontalStackLayout>
 
         <CollectionView x:Name="ImagesCollection"
@@ -16,12 +16,12 @@
                         HeightRequest="700">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="4" CornerRadius="8" HasShadow="False" BorderColor="#ddd" Margin="4">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnImageTapped" NumberOfTapsRequired="1" />
-                        </Frame.GestureRecognizers>
-
-                        <Image Source="{Binding FilePath}" Aspect="AspectFill" HeightRequest="120" WidthRequest="120" />
+                    <Frame Padding="4" CornerRadius="60" HasShadow="False" BorderColor="#ddd" Margin="4">
+                        <Image Source="{Binding FilePath}" Aspect="AspectFill" HeightRequest="120" WidthRequest="120">
+                            <Image.Clip>
+                                <EllipseGeometry Center="60,60" RadiusX="60" RadiusY="60" />
+                            </Image.Clip>
+                        </Image>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
