@@ -3,7 +3,14 @@
              x:Class="SQLiteTutorial4.Views.ImageDetailPage"
              Title="Image">
 
+    
     <VerticalStackLayout Padding="10" Spacing="10">
+        <Entry x:Name="CaptionEntry"
+               Placeholder="Add a caption"
+               TextChanged="OnCaptionChanged"
+               FontSize="16" />
+
+
         <Image x:Name="FullImage" Aspect="AspectFit" HeightRequest="400" />
         <HorizontalStackLayout Spacing="10">
             <Button Text="Delete" Clicked="OnDeleteClicked" BackgroundColor="#E53935" TextColor="White" />
