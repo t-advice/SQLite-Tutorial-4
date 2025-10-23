@@ -9,6 +9,9 @@
             <Button Text="Capture Photo" Clicked="OnCapturePhotoClicked" CornerRadius="20" />
             <Button Text="Pick Photo" Clicked="OnPickPhotoClicked" CornerRadius="20" />
         </HorizontalStackLayout>
+        <VerticalStackLayout>
+            <Label></Label>
+        </VerticalStackLayout>
 
         <CollectionView x:Name="ImagesCollection"
                         ItemsLayout="VerticalGrid, 3"
